@@ -29,15 +29,14 @@ st.markdown("""
 
 try:
     # Charger les données d'établissement avec différents engines
-    df = None
-    excel_path = "/Users/mac/Documents/les_projets_de_stage_PFA/evaluation_motrice_hosting/data/etab.xlsx"
-    
+    excel_path = os.path.join("data", "etab.xlsx")
+
     # Vérifier si le fichier existe
     if not os.path.exists(excel_path):
         st.error(f"❌ Fichier '{excel_path}' introuvable.")
-        st.info("📋 Veuillez vous assurer que le fichier 'etab.xlsx' est dans le dossier 'data/'")
+        st.info("📋 Veuillez vous assurer que le fichier 'data/etab.xlsx' est bien présent.")
         st.stop()
-    
+
     # Essayer différents engines
     engines_to_try = ['openpyxl', 'xlrd', None]
     
