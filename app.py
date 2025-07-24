@@ -30,7 +30,7 @@ st.markdown("""
 try:
     # Charger les données d'établissement avec différents engines
     df = None
-    excel_path = "/Users/mac/Documents/les_projets_de_stage_PFA/evaluation_motrice/data/etab.xlsx"
+    excel_path = "/Users/mac/Documents/les_projets_de_stage_PFA/evaluation_motrice_hosting/data/etab.xlsx"
     
     # Vérifier si le fichier existe
     if not os.path.exists(excel_path):
